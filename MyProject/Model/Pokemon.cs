@@ -27,6 +27,19 @@ namespace MyProject.Model
         [Required]
         [Range(1, 255, ErrorMessage = "Defence must be between 1-255")]
         public int Defence { get; set; }
+
+        [Required]
+        [Range(1, 255, ErrorMessage = "Speed must be between 1-255")]
+        public int Speed { get; set; }
+
+        [Required]
+        [Range(1, 10, ErrorMessage = "Generation mus be between 1-10")]
+        public int Generation { get; set; }
+
+        [Required]
+        public bool Legendary { get; set; }
+
+        public List<Trainer> Trainers { get; set; }
     }
 }
 
