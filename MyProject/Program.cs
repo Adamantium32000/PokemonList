@@ -4,6 +4,7 @@ using MyProject.Context;
 using MyProject.Model;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
+using MyProject.Components.Account.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,8 @@ builder.Services.AddDbContext<DatabaseContext>();
 builder.Services.AddIdentityCore<User>()
     .AddEntityFrameworkStores<DatabaseContext>()
     .AddSignInManager();
+
+builder.Services.AddScoped<PokemonImageGrabber>();
 
 var app = builder.Build();
 

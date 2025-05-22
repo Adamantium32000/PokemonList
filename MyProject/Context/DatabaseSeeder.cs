@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using MyProject.Data;
+using MyProject.Model;
 
 namespace MyProject.Context
 {
